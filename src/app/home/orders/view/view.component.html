@@ -1,0 +1,34 @@
+<div class="thetable">
+    <table>
+        <thead>
+            <tr>
+                <td>المنتج</td>
+                <td>السعر</td>
+                <td>الكمية</td>
+                <td>المجموع</td>
+    
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let product of cart_products">
+                <td>
+                    <div class="firstchildcontainer">
+                    <img src="{{product.productimage}}">
+                    
+                    </div>
+                
+                </td>
+                <td>{{product.productprice}}</td>
+                <td>  {{product.quantity}}</td>
+                
+                <td>{{product.quantity*product.productprice}}</td>
+            </tr>
+    
+    
+    
+    
+        
+        </tbody>
+    </table>
+    </div>

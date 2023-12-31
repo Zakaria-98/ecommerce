@@ -1,0 +1,259 @@
+<div class="fullpage">
+
+  <div class="poster">
+    <img src="../../../../assets/images/undraw_web_shopping_re_owap.svg">
+  <div class="posterparagraph-outer">
+    <div class="posterparagraph">
+      <p> 
+        Get What You 
+         <span style="color: #be123c;"> Need...</span>
+      </p>
+
+    </div>
+  </div>
+
+
+  </div>
+
+    <div *ngIf="false" class="cat-container">
+
+
+      <div class="cat-innercontainer">
+
+        <div class="cat-cards">
+
+          <div *ngFor="let cat of allcategories" class="cat-outercard">
+              <div   class="cat-card">
+
+                <div class="cat-title">
+                    <p>{{cat}}</p>
+
+                </div>
+
+                <div class="cat-icon">
+                  <mat-icon >home</mat-icon>
+
+              </div>
+
+
+
+              </div>
+
+              
+          </div>
+
+          
+
+
+
+
+
+
+
+    </div>
+
+  
+  </div>
+  
+  </div>
+
+  <div  class="properties">
+
+    <div  (click)="changecat(1)" [ngClass]="{'property-active':selectedcat==1}"  class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/done_8914502.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>All</p>
+
+      </div>
+    </div>
+
+    <div (click)="changecat(2)" [ngClass]="{'property-active':selectedcat==2}" class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/gadgets_2450327.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>Electronics</p>
+
+      </div>
+    </div>
+
+    <div (click)="changecat(3)" [ngClass]="{'property-active':selectedcat==3}" class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/jewel_7031398.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>Jewelery</p>
+
+      </div>
+    </div>
+
+
+    <div (click)="changecat(4)" [ngClass]="{'property-active':selectedcat==4}" class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/uniform_5765947.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>Men's  </p>
+
+      </div>
+    </div>
+
+
+    <div (click)="changecat(5)" [ngClass]="{'property-active':selectedcat==5}" class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/dress_7133108.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>Women's </p>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+  
+  <div *ngIf="false" class="properties">
+    <div class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/express-delivery_1981810.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>خدمة توصيل</p>
+
+      </div>
+    </div>
+
+    <div class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/brand_9934628.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>ضمان لجميع المنتجات</p>
+
+      </div>
+    </div>
+
+
+    <div class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/exchange_5794870.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>إستبدال و إسترجاع </p>
+
+      </div>
+    </div>
+
+
+    <div class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/badge_10477096.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>منتجات أصلية</p>
+
+      </div>
+    </div>
+
+
+    <div class="property">
+      <div class="propertyimg">
+        <img src="../../../../assets/images/tag_5037936.png">
+
+      </div>
+
+      <div class="propertyname">
+        <p>أسعار منافسة</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+
+    <div class="innercontainer">
+
+      <div class="cards">
+
+        <div  *ngFor="let product of allproducts" class="outercard">
+            <div  class="product-card">
+              <div (click)="productpage(product.id)" class="product-img">
+                  <img src="{{product.image}}">
+              </div>
+              <div (click)="productpage(product.id)" class="product-cat">
+                <p>{{product.category}}</p>
+               </div>
+              <div (click)="productpage(product.id)" class="product-title">
+                  <p >{{product.title}}</p>
+              </div>
+
+              <div (click)="productpage(product.id)" class="product-rating">
+                <div>
+                <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>1}">star</mat-icon>
+                <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>2}">star</mat-icon>
+                <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>3}">star</mat-icon>
+                <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>4}">star</mat-icon>
+                <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>5}">star</mat-icon>
+                </div>
+                <p>( {{product.rating.count}} )</p>
+
+            </div>
+
+              <div (click)="productpage(product.id)" class="product-price">
+              <p> {{product.id}} $</p> 
+              </div>
+              <div class="product-button">
+
+                <button *ngIf="!isadded(product.id)" (click)=" addtocart(product.id,product.title,product.price,product.image)" class="productbtn">Add to cart  <mat-icon>shopping_cart</mat-icon></button>
+                <button  *ngIf="isadded(product.id)" (click)=" addtocart(product.id,product.title,product.price,product.image)" class="product-button-cancel">remove from cart  <mat-icon>delete</mat-icon></button>
+
+              </div>
+
+
+            </div>
+
+
+        </div>
+
+        
+
+        
+
+
+
+
+
+
+
+  </div>
+
+
+</div>
+
+</div>
+  </div>
+  <router-outlet></router-outlet>

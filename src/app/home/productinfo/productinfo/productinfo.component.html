@@ -1,0 +1,61 @@
+<div class="fullpage">
+    <div class="container">
+        <div class="productinfo">
+            <div class="product-image">
+                <img src="{{product.image}}">
+            </div>
+            <div class="product-details">
+                <div class="product-category">
+                    <p>{{product.category}}</p>
+                </div>
+
+                <div class="product-title">
+                    <p>{{product.title}}</p>
+
+                </div>
+                <div class="product-price">
+                    <p> {{product.price}} $</p> 
+
+                </div>
+
+                <div class="product-rating">
+                    <div>
+                    <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>1}">star</mat-icon>
+                    <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>2}">star</mat-icon>
+                    <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>3}">star</mat-icon>
+                    <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>4}">star</mat-icon>
+                    <mat-icon [ngClass]="{'product-rating-cancel':product.rating.rate>5}">star</mat-icon>
+                    </div>
+                    <p>( {{product.rating.count}} )</p>
+    
+                </div>
+
+                
+                <div class="product-status">
+                    <mat-icon>done_outline</mat-icon>  <p>Available</p>
+
+                </div>
+
+
+
+                <div class="product-counter">
+  
+                    <button class="addbtn" (click)="addone()">  <mat-icon>add</mat-icon></button>
+                    <input type="number" [(ngModel)]="countervar">
+                    <button class="removebtn" (click)="removeone()">  <mat-icon>remove</mat-icon></button>
+                    <button *ngIf="!isadded()" (click)=" addtocart()" class="cardbtn">Add to cart  <mat-icon>shopping_cart</mat-icon></button>
+                    <button *ngIf="isadded()" (click)=" addtocart()" class="cardbtn-cancel">remove from cart  <mat-icon>delete</mat-icon></button>
+
+
+                </div>
+
+                <div class="product-desc">
+                    <p>{{product.description}}</p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

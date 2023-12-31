@@ -1,0 +1,46 @@
+<div class="fullpage">
+    <div class="container">
+        <div class="card-table">
+            <div class="thetable">
+                <div *ngIf="isemptycart" class="emptycart">
+                    <p>!empty cart</p>
+                    <img src='../../../../assets/images/shop-bag_6474403.png'>
+
+                </div>
+                <table *ngIf="!isemptycart">
+                    <thead>
+                        <tr>
+                            <td>Order No.</td>
+                            <td>Elements</td>
+                            <td>Price</td>
+                            <td>State</td>
+
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr (click)="vieworder()"  *ngFor="let order of orders ; index as i ">
+                            <td> {{i+1}}</td>
+                            <td>
+                                <div class="firstchildcontainer">
+                                <p>{{order.pieces}} </p>
+                                </div>
+                            
+                            </td>
+                            <td>{{order.price}}</td>
+
+                            
+                            <td><span class="loading"> قيد الإرسال</span> </td>
+                        </tr>
+
+
+
+                    
+                    </tbody>
+                </table>
+        </div>
+
+
+        </div>
+    </div>
+</div>

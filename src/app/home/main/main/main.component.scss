@@ -1,0 +1,990 @@
+html{
+    height: 100%;
+}
+.fullpage{
+    width: 100%;
+    min-height: 90%;
+    background-color: white ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    direction: rtl;
+
+
+}
+
+.poster{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f6f6f6;
+    direction: ltr;
+}
+
+.poster img{
+    width: 50%;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+.posterparagraph{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+.posterparagraph p{
+    color: black;
+    width: 100%;
+    font-size: 40px;
+    font-style: italic;
+    font-family: alexandria;
+    direction: ltr;
+}
+
+
+.container{
+    margin-top: 15px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white ;
+
+}
+
+.innercontainer{
+    width: 80%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+}
+
+
+
+.cards{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    flex-wrap: wrap;
+
+
+}
+
+.outercard{
+    width: 25%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.product-card{
+
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    width: 65%;
+    height: 370px;
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+
+}
+
+.product-card:hover{
+    transform: scale(1.07);
+
+}
+
+.product-img {
+width: 100%;
+height: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.product-img img {
+    width:95%;
+    height: 95%;
+    border-radius: 8px;
+}
+
+.product-cat{
+    margin-top: 10px;
+    direction: ltr;
+    height:10%;
+    width:100%;
+    margin-left: 10px;
+    font-family: Marcellus_SC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.product-cat p{
+    padding: 5px;
+    width: fit-content;
+background-color: #e5e3ff;
+border-radius: 2.5rem;
+}
+
+.product-title{
+    direction: ltr;
+    height:20%;
+    width:100%;
+    margin-left: 5px;
+    font-weight: bold;
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-title p{
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-rating{
+height: 10%;
+width:100%;
+direction: ltr;
+margin-left: 5px;
+font-family: alexandria;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+
+}
+
+.product-rating p{
+    margin-left: 5px;
+}
+
+
+.product-rating-cancel {
+    color: #ffd700 ;
+    
+            
+    }
+
+.product-status mat-icon{
+    color: green;
+}
+
+.product-price{
+    direction: ltr;
+    height: 10%;
+    width:100%;
+    margin-left: 5px;
+    font-weight: bold;
+    font-family: alexandria;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.product-button{
+    height: 10%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    direction: rtl;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.product-button-cancel{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    background-color:white ;
+    font-family: inconsolata;
+    color: #3f3d56;
+    font-weight: bold;
+    border-color:#3f3d56;
+    height: 80%;
+    font-size: large;
+    margin-right: 5px;
+    text-transform: uppercase;
+    border-radius: 0.7rem;
+
+
+}
+
+
+.productbtn{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    background-color: #3f3d56;     ;
+    font-family: inconsolata;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.7rem;
+    border-color: #3f3d56  ;
+    height: 85%;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.product-button button mat-icon{
+    font-size: 22px;
+}
+
+.product-button button:hover {
+cursor: pointer;    
+    }
+
+    .cat-container{
+        margin-top: 15px;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: white ;
+    
+    }
+    
+    .cat-innercontainer{
+        width: 80%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        direction: rtl;
+    }
+    
+
+    
+    .cat-cards{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        direction: rtl;
+        flex-wrap: wrap;
+    
+    
+    }
+    
+    .cat-outercard{
+        width: 25%;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    
+    
+    .cat-card{
+    
+    
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: white;
+        width: 65%;
+        height: 100%;
+    
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background-color: #E6E6FA;
+
+      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .cat-card:hover{
+
+        background-color: #b5b5da;
+        cursor: pointer;
+
+
+    }
+    
+
+    
+    .cat-title{
+        height:30%;
+        width:90%;
+        margin-right: 5px;
+        font-weight: bold;
+        font-family: Montserrat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .cat-icon{
+        height:30%;
+        width:90%;
+        margin-right: 5px;
+        font-weight: bold;
+        font-family: Montserrat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+.properties{
+    margin-top: 15px;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    }
+
+    .property{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+
+    .property-active{
+        
+        border-style: solid;
+        border-color: #be123c;
+        border-width: 0 0 5px 0;
+        
+    }
+
+
+    .propertyimg{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        
+        
+    }
+
+    .propertyimg img{
+        height: 100%;
+        background-image: cover;
+
+    }
+
+    .propertyimg img:hover {
+        transform: scale(1.04);
+
+    }
+
+    .propertyname{
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .propertyname p{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: large;
+        font-family: cairo;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+        .poster{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .poster img{
+            width: 80%;
+            height: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .posterparagraph{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        
+        }
+        
+        
+        .poster p{
+            width: 100%;
+
+        }
+
+        .posterparagraph p{
+            font-size: 35px;
+        }
+
+
+             
+
+            .cards{
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                direction: rtl;
+                flex-wrap: wrap;
+            
+            
+            }
+            
+            .outercard{
+                width: 80%;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            
+            }
+            
+            
+            
+            .product-card{
+                width: 100%;
+            
+            display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+            
+            }
+
+            .propertyimg{
+                width: 100%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+                
+                
+            }
+        
+            .propertyimg img{
+                width: 80%;
+                height: 80%;
+                background-image: cover;
+        
+            }
+        
+        
+        
+
+    
+                
+    }
+    
+    
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+
+        .poster{
+            width: 100%;
+            height: 100%;
+        }
+        .posterparagraph-outer{
+            width: 100%;
+            height:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        
+        .posterparagraph{
+            width: 100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        
+        .poster p{
+            color: black;
+            height:50%;
+            width: 100%;
+            font-size: 40px;
+            font-style: italic;
+            font-family: alexandria;
+        }
+
+
+        .properties{
+            margin-top: 15px;
+            background-color: white;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        
+            }
+        
+            .property{
+                width: 20%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+        
+        
+            }
+
+            .propertyname{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .propertyname p{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                font-size: large;
+
+
+            }
+
+
+            .cards{
+                width: 100%;
+
+            
+            
+            }
+            
+            .outercard{
+                width: 50%;
+                height: 400px;
+
+            
+            }
+            
+            
+            
+            .product-card{
+                width: 90%;
+            
+
+            
+            }
+
+
+
+        
+
+
+      
+    }
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        .poster{
+            width: 100%;
+            height: 100%;
+        }
+        .posterparagraph-outer{
+            width: 100%;
+            height:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        
+        .posterparagraph{
+            width: 100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        
+        .poster p{
+            color: black;
+            height:50%;
+            width: 100%;
+            font-size: 40px;
+            font-style: italic;
+            font-family: alexandria;
+        }
+
+
+        .properties{
+            margin-top: 15px;
+            background-color: white;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        
+            }
+        
+            .property{
+                width: 20%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+        
+        
+            }
+
+            .propertyname{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .propertyname p{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                font-size: large;
+
+
+            }
+
+            
+            .cards{
+                width: 100%;
+
+            
+            
+            }
+            
+            .outercard{
+                width: 33%;
+                height: 400px;
+
+            
+            }
+            
+            
+            
+            .product-card{
+                width: 90%;
+            
+
+            
+            }
+
+
+
+    
+    }
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .poster{
+            width: 100%;
+            height: 100%;
+        }
+        .posterparagraph-outer{
+            width: 100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        
+        .posterparagraph{
+            width: 100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        
+        .poster p{
+            color: black;
+            height:50%;
+            width: 100%;
+            font-size: 40px;
+            font-style: italic;
+            font-family: alexandria;
+        }
+
+
+        .properties{
+            margin-top: 15px;
+            background-color: white;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        
+            }
+        
+            .property{
+                width: 20%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+        
+        
+            }
+
+            .propertyname{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .propertyname p{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                font-size: large;
+
+
+            }
+
+            
+            .cards{
+                width: 100%;
+
+            
+            
+            }
+            
+            .outercard{
+                width: 25%;
+                height: 400px;
+
+            
+            }
+            
+            
+            
+            .product-card{
+                width: 90%;
+            
+
+            
+            }
+
+
+    }    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        .posterparagraph{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        
+        }
+        
+        
+        .poster p{
+            color: black;
+            width: 100%;
+            font-size: 40px;
+            font-style: italic;
+            font-family: alexandria;
+        }
+
+
+        .properties{
+            margin-top: 15px;
+            background-color: white;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        
+            }
+        
+            .property{
+                width: 20%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+        
+        
+            }
+
+            .propertyname{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .propertyname p{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                font-size: large;
+
+
+            }
+
+            
+            .cards{
+                width: 100%;
+
+            
+            
+            }
+            
+            .outercard{
+                width: 20%;
+                height: 400px;
+
+            
+            }
+            
+            
+            
+            .product-card{
+                width: 90%;
+            
+
+            
+            }
+
+
+     
+    
+      
+    }    

@@ -1,0 +1,93 @@
+<div class="fullpage">
+    <div class="container">
+        <div class="card-table">
+            <div class="thetable">
+                <div  *ngIf="isemptycart" class="emptycart">
+                    <p>!empty cart</p>
+                    <img src='../../../../assets/images/shop-bag_6474403.png'>
+
+                </div>
+                <table *ngIf="!isemptycart">
+                    <thead>
+                        <tr>
+                            <td>Product</td>
+                            <td>Price</td>
+                            <td>Quantity</td>
+                            <td>Total price</td>
+
+                        </tr>
+                    </thead>
+
+                    
+                    <tbody >
+
+                        <tr  *ngFor="let product of cart_products">
+                            <td >
+                                <div class="firstchildcontainer">
+                                <button (click)="removeproduct(product.productid)"  class="clerabtn"><mat-icon>clear</mat-icon></button>
+                                <img src="{{product.productimage}}">
+                                <p>{{product.productname}} </p>
+                                </div>
+                            
+                            </td>
+                            <td>{{product.productprice}} $</td>
+                            <td class="thirdchildcontainer">  
+                                <button (click)="removeone(product.productid)" class="removebtn">  <mat-icon>remove</mat-icon></button>
+                                <input class="counterinput"type="number"   placeholder={{product.quantity}} >
+                                <button (click)="addone(product.productid)" class="addbtn">  <mat-icon>add</mat-icon></button>
+
+                            </td>
+                            
+                            <td>{{product.quantity*product.productprice}} $</td>
+                        </tr>
+
+
+
+
+                    
+                    </tbody>
+                </table>
+        </div>
+
+            <div class="sumcard">
+                <label> Total</label>
+                <input disabled value={{cartsum}}>
+                
+            </div>
+
+        </div>
+        
+        <div class="card-form">
+            <form [formGroup]="orderform" (ngSubmit)="onSubmit()" >
+            <div class="inputform">
+                <label>Name <span>*</span></label>
+                <input  [ngClass]="{'invalid':orderform.get('name')?.invalid && orderform.get('name')?.touched }" class="valid"  formControlName="name" required>
+            </div>
+
+            <div class="inputform">
+                <label>Phone number <span>*</span></label>
+                <input [ngClass]="{'invalid':orderform.get('phone')?.invalid && orderform.get('phone')?.touched }" class="valid" formControlName="phone" required>
+            </div>
+
+            <div class="inputform">
+                <label>City <span>*</span></label>
+                <input [ngClass]="{'invalid':orderform.get('city')?.invalid && orderform.get('city')?.touched }" class="valid" formControlName="city" required="">
+            </div>
+
+            <div class="inputform">
+                <label>Address <span>*</span></label>
+                <input [ngClass]="{'invalid':orderform.get('address')?.invalid && orderform.get('address')?.touched }" class="valid" formControlName="address" required>
+            </div>
+
+            <div class="submitbtn">
+                <button [ngClass]="{'disabledbtn':orderform.invalid , 'subbtn':!orderform.invalid}" [disabled]="orderform.invalid" type="submit" > Order </button>
+            </div>
+        
+
+
+        </form>
+        </div>
+   
+        
+    </div>
+</div>
